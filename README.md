@@ -14,19 +14,19 @@ Hello! I'm Gururaj, a final-year Computer Science and Engineering student at Sav
 ## 🛠️ Skills
 
 - **Languages:** Python, C#, JavaScript, HTML, CSS
-- **Technologies & Tools:** Flask, Power BI, Matplotlib, Scikit-learn, Keras, Pandas, Seaborn, BeautifulSoup4, NumPy
-- **Areas of Expertise:** Data Structures and Algorithms, Data Analysis, Machine Learning, Web Frameworks
+- **Technologies & Tools:** Pytorch, Keras, Ultralytics, Matplotlib, Scikit-learn, Keras, Pandas, Seaborn, BeautifulSoup4, NumPy
+- **Areas of Expertise:** Data Structures and Algorithms, Data Analysis, Machine Learning, Deep Learning
 
 ## 💼 Work Experience
 
-### Data Analyst | Nexus Infosec LLC
+### Data Analyst Intern | Nexus Infosec LLC
 **Feb 2023 – May 2023**
 
 - Led a team to construct and submit NLP datasets from various sources.
 - Performed extensive web scraping using Python.
 - Delivered clean and accurate datasets, contributing to data-driven decision-making.
   
-### Deep Learning Intern | Pixonate Labs
+### Deep Learning Engineer | Pixonate Labs
 **Aug 2024 – present**
 
 - Led a team to construct and submit NLP datasets from various sources.
