@@ -29,9 +29,6 @@ Hello! I'm Gururaj, a final-year Computer Science and Engineering student at Sav
 ### Deep Learning Engineer | Pixonate Labs
 **Aug 2024 – present**
 
-- Led a team to construct and submit NLP datasets from various sources.
-- Performed extensive web scraping using Python.
-- Delivered clean and accurate datasets, contributing to data-driven decision-making.
 
 ## 🎓 Education
 
