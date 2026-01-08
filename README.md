@@ -55,15 +55,6 @@ I specialize in optimizing deep learning inference (ONNX/TensorRT/CUDA) and arch
 
 ---
 
-## 📊 GitHub Analytics
-
-<p align="left">
-  <img height="160em" src="https://github-readme-stats.vercel.app/api?username=gurumalekar&show_icons=true&theme=midnight-purple&include_all_commits=true&count_private=true&hide_border=true"/>
-  <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=gurumalekar&layout=compact&theme=midnight-purple&hide_border=true"/>
-</p>
-
----
-
 <div align="center">
 
 **[LinkedIn](https://linkedin.com/in/gururajmalekar/)** • **[Email](mailto:gurumalekar@gmail.com)**
