@@ -1,92 +1,71 @@
-# Hi there, I'm Gururaj Malekar 👋
+# Gururaj Malekar
 
-**Machine Learning Engineer | Computer Vision Specialist | Medical Imaging Researcher**
+**Machine Learning Engineer | High-Performance Computer Vision | MLOps Specialist**
 
-I am a Machine Learning Engineer based in Pune, India, currently working at **Pixonate Labs**. My expertise lies in building scalable AI pipelines for **Computational Pathology (WSI)**, **Industrial Automation**, and **Cybersecurity**. I specialize in bridging the gap between state-of-the-art research (ViTs, GNNs) and production-grade deployment (AWS SageMaker, Docker, Edge Devices).
+📍 **Pune, India** | 🏢 **Pixonate Labs**
 
-- 🔭 I’m currently working on **High-precision WSI Segmentation & Industrial CV Systems**.
-- 🔬 I’m researching **Multi-modal fusion frameworks for edge-device stress quantification**.
-- 🎓 B.E. in Computer Science & Engineering from **Pune University**.
-- ⚡ Fun fact: I've programmed algorithms to read legacy analog electricity meters using only billing data.
+I engineer high-throughput AI systems that bridge the gap between **state-of-the-art research** and **latency-critical production environments**. My work focuses on pushing the boundaries of **Computational Pathology (WSI)**, **Industrial IoT**, and **Cybersecurity**, delivering scalable solutions where precision and speed are non-negotiable.
 
----
-
-## 🛠️ Tech Stack
-
-**Languages & Scripting**
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
-![Bash](https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-
-**Machine Learning & CV**
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
-![YOLO](https://img.shields.io/badge/YOLO-00FFFF?style=for-the-badge&logo=yolo&logoColor=black)
-![Scikit-Learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![Pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-
-**Medical Imaging & Niche**
-![Medical](https://img.shields.io/badge/Histopathology-WSI-red?style=for-the-badge)
-![Tools](https://img.shields.io/badge/CellViT-HoVerNet-blue?style=for-the-badge)
-![Tools](https://img.shields.io/badge/SMP-Segmentation_Models-green?style=for-the-badge)
-
-**Cloud & DevOps**
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
+I specialize in optimizing deep learning inference (ONNX/TensorRT/CUDA) and architecting robust cloud-native pipelines (AWS SageMaker/ClickHouse).
 
 ---
 
-## 🚀 Featured Projects
+## ⚡ Technical Arsenal
+
+| Domain | Stack |
+| :--- | :--- |
+| **Deep Learning & Vision** | ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white) ![YOLO](https://img.shields.io/badge/YOLO-00FFFF?style=flat-square&logo=yolo&logoColor=black) ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white) ![Scikit-Learn](https://img.shields.io/badge/Scikit_Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white) |
+| **Medical & Research** | `CellViT` `HoVer-Net` `SMP` `WSI (40x Magnification)` `Nuclei Segmentation` |
+| **MLOps & Cloud** | ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![SageMaker](https://img.shields.io/badge/SageMaker-FF9900?style=flat-square&logo=amazon-aws&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black) |
+| **Data Engineering** | ![ClickHouse](https://img.shields.io/badge/ClickHouse-FFCC00?style=flat-square&logo=clickhouse&logoColor=black) ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white) |
+| **Edge & Industrial** | `Modbus TCP/IP` `PLC Integration` `CUDA Optimization` `ONNX Runtime` |
+
+---
+
+## 🛠️ High-Impact Projects
 
 ### 🧬 [WSI Nuclei Segmentation Pipeline](https://github.com/gurumalekar/yolo-nuke-seg)
-* **Tech:** YOLO, UNet++, CUDA, PyTorch
-* Architected a high-performance, two-stage inference pipeline for Whole Slide Images (WSI) at 40x magnification.
-* Achieved benchmarks of **<1 minute per 2048x2048 patch** on RTX 4070 using optimized CUDA kernels.
-* Outputs polygon masks and unique integer labels for morphological analysis.
+* **Architecture:** Hybrid YOLO + UNet++ inference engine for Gigapixel Histopathology images.
+* **Performance:** Achieved **<60 seconds inference time** per 2048x2048 patch on RTX 4070 via custom CUDA kernel optimization.
+* **Impact:** Solves the bottleneck of processing 40x magnification slides, delivering millimetric precision for biological feature extraction.
 
-### 🩸 Sickle Cell Diagnosis Automation
-* **Tech:** YOLO, Custom Classifiers, Streamlit
-* Built an end-to-end diagnostic pipeline categorizing clinical samples into "Disease", "Trait", or "OK".
-* Deployed via hospital servers to assist pathologists with automated morphology analysis.
+### 🛡️ Real-Time Cybersecurity Threat Detection
+* **Stack:** Graph Neural Networks (GNN), AWS SageMaker, ClickHouse.
+* **Innovation:** Engineered a continuous-learning DGA (Domain Generation Algorithm) detection pipeline.
+* **Scale:** Automated ingestion loops handling massive log streams from ClickHouse to inference endpoints with near real-time synchronization.
 
-### 🛡️ Cybersecurity Threat Detection System
-* **Tech:** GNNs, AWS SageMaker, ClickHouse
-* Designed a real-time Domain Generation Algorithm (DGA) detection pipeline.
-* Automated data ingestion loops from ClickHouse logs to inference endpoints with periodic synchronization.
+### 🩸 Automated Sickle Cell Diagnosis
+* **Clinical AI:** Built a tri-class classifier ("Disease", "Trait", "OK") surpassing standard morphological analysis speed.
+* **Deployment:** End-to-end deployment on hospital servers with a custom Streamlit frontend for pathologist interaction.
 
-### 🏭 Industrial Vision & PLC Integration
-* **Tech:** Modbus TCP/IP, OpenCV, Edge AI
-* Developed real-time defect detection systems (bearing defects, roller counting) for manufacturing lines.
-* Enabled direct model-to-system communication to trigger hardware sorting mechanisms (OK/NG).
+### 🏭 Industrial Vision & PLC Automation
+* **Edge AI:** Deployed robust defect detection models (bearing faults, roller counting) in high-noise manufacturing environments.
+* **Hardware Integration:** Programmed direct low-latency communication layers (Modbus TCP/IP) to trigger PLC sorting mechanisms instantly upon inference.
 
 ---
 
-## 📚 Research & Publications
+## 📖 Research & Contributions
 
-* **A Cytology Dataset for Early Oral Squamous Cell Carcinoma Detection** (2025)
-    * *Preprint:* [arXiv:2506.09661](https://arxiv.org/abs/2506.09661)
-    * Collaborated on a multicenter oral cytology dataset and implemented AI-driven diagnostic methods for cellular anomaly classification.
+* **[Preprint] A Cytology Dataset for Early Oral Squamous Cell Carcinoma Detection (2025)**
+    * *arXiv:2506.09661*
+    * Spearheaded the development of a multi-center dataset and AI benchmarking for early-stage cancer detection in resource-constrained settings.
 
-* **Real-time Anxiety detection using Deep Learning and IoT** (In-Press, IEEE)
-    * Developed a multi-modal fusion framework using Computer Vision, NLP, and Pulse data for stress quantification.
+* **[In-Press] Real-time Anxiety Detection using Deep Learning and IoT (IEEE)**
+    * Developed a novel multi-modal fusion framework combining Computer Vision, NLP, and Pulse data for accurate stress quantification at the edge.
 
 ---
 
-## 📈 GitHub Stats
+## 📊 GitHub Analytics
 
 <p align="left">
-<a href="https://github.com/gurumalekar">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=gurumalekar&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=gurumalekar&layout=compact&theme=tokyonight"/>
-</a>
+  <img height="160em" src="https://github-readme-stats.vercel.app/api?username=gurumalekar&show_icons=true&theme=midnight-purple&include_all_commits=true&count_private=true&hide_border=true"/>
+  <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=gurumalekar&layout=compact&theme=midnight-purple&hide_border=true"/>
 </p>
 
 ---
 
-## 📫 Connect with me
+<div align="center">
 
-* **LinkedIn:** [linkedin.com/in/gururajmalekar](https://linkedin.com/in/gururajmalekar/)
-* **Email:** [gurumalekar@gmail.com](mailto:gurumalekar@gmail.com)
+**[LinkedIn](https://linkedin.com/in/gururajmalekar/)** • **[Email](mailto:gurumalekar@gmail.com)**
+
+</div>
