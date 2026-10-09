@@ -1,62 +1,242 @@
 # Gururaj Malekar
 
-**Machine Learning Engineer | High-Performance Computer Vision | MLOps Specialist**
+**Machine Learning Engineer | Computer Vision | Deep Learning | Industrial & Medical Imaging**
 
-📍 **Pune, India** | 🏢 **Pixonate Labs**
+📍 Pune, India  
+🏢 Machine Learning Engineer @ Pixonate Labs
 
-I engineer high-throughput AI systems that bridge the gap between **state-of-the-art research** and **latency-critical production environments**. My work focuses on pushing the boundaries of **Computational Pathology (WSI)**, **Industrial IoT**, and **Cybersecurity**, delivering scalable solutions where precision and speed are non-negotiable.
+I build end-to-end computer vision systems spanning **model development, image processing, industrial cameras, embedded control, GPU inference, and production deployment**.
 
-I specialize in optimizing deep learning inference (ONNX/TensorRT/CUDA) and architecting robust cloud-native pipelines (AWS SageMaker/ClickHouse).
+My work sits at the intersection of:
 
----
+- Industrial Computer Vision
+- Deep Learning
+- Medical Imaging & Computational Pathology
+- Embedded Vision Systems
+- High-Resolution Image Processing
+- Production ML
 
-## ⚡ Technical Arsenal
-
-| Domain | Stack |
-| :--- | :--- |
-| **Deep Learning & Vision** | ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white) ![YOLO](https://img.shields.io/badge/YOLO-00FFFF?style=flat-square&logo=yolo&logoColor=black) ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white) ![Scikit-Learn](https://img.shields.io/badge/Scikit_Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white) |
-| **Medical & Research** | `CellViT` `HoVer-Net` `SMP` `WSI (40x Magnification)` `Nuclei Segmentation` |
-| **MLOps & Cloud** | ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![SageMaker](https://img.shields.io/badge/SageMaker-FF9900?style=flat-square&logo=amazon-aws&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black) |
-| **Data Engineering** | ![ClickHouse](https://img.shields.io/badge/ClickHouse-FFCC00?style=flat-square&logo=clickhouse&logoColor=black) ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white) |
-| **Edge & Industrial** | `Modbus TCP/IP` `PLC Integration` `CUDA Optimization` `ONNX Runtime` |
+I enjoy problems where the solution involves more than training a model: camera behaviour, optics, motion, hardware synchronization, inference performance, failure analysis, and real-world deployment all matter.
 
 ---
 
-## 🛠️ High-Impact Projects
+## Technical Stack
 
-### 🧬 [WSI Nuclei Segmentation Pipeline](https://github.com/gurumalekar/yolo-nuke-seg)
-* **Architecture:** Hybrid YOLO + UNet++ inference engine for Gigapixel Histopathology images.
-* **Performance:** Achieved **<60 seconds inference time** per 2048x2048 patch on RTX 4070 via custom CUDA kernel optimization.
-* **Impact:** Solves the bottleneck of processing 40x magnification slides, delivering millimetric precision for biological feature extraction.
-
-### 🛡️ Real-Time Cybersecurity Threat Detection
-* **Stack:** Graph Neural Networks (GNN), AWS SageMaker, ClickHouse.
-* **Innovation:** Engineered a continuous-learning DGA (Domain Generation Algorithm) detection pipeline.
-* **Scale:** Automated ingestion loops handling massive log streams from ClickHouse to inference endpoints with near real-time synchronization.
-
-### 🩸 Automated Sickle Cell Diagnosis
-* **Clinical AI:** Built a tri-class classifier ("Disease", "Trait", "OK") surpassing standard morphological analysis speed.
-* **Deployment:** End-to-end deployment on hospital servers with a custom Streamlit frontend for pathologist interaction.
-
-### 🏭 Industrial Vision & PLC Automation
-* **Edge AI:** Deployed robust defect detection models (bearing faults, roller counting) in high-noise manufacturing environments.
-* **Hardware Integration:** Programmed direct low-latency communication layers (Modbus TCP/IP) to trigger PLC sorting mechanisms instantly upon inference.
+| Area | Technologies |
+|---|---|
+| **Computer Vision** | OpenCV, YOLO, Object Detection, Instance Segmentation, Image Registration, Phase Correlation, OCR, Image Processing |
+| **Deep Learning** | PyTorch, TensorFlow/Keras, Scikit-learn, CNNs, Vision Transformers, Anomaly Detection |
+| **Medical Imaging** | Whole Slide Imaging, CellViT, HoVer-Net, UNet++, SMP, Nuclei Detection & Segmentation |
+| **Inference & Deployment** | ONNX, ONNX Runtime, CUDA, Docker, AWS SageMaker |
+| **Industrial Vision** | Industrial Cameras, PLC Integration, Modbus TCP/IP, Hardware Triggering, Automated Inspection |
+| **Embedded Systems** | Raspberry Pi Pico 2, MicroPython, Servo Control, Sensors, Serial Communication |
+| **Backend & Systems** | FastAPI, asyncio, REST APIs, WebSockets, Linux, Git |
+| **Data** | NumPy, Pandas, ClickHouse, SQL, pyvips, BigTIFF |
 
 ---
 
-## 📖 Research & Contributions
+# Selected Work
 
-* **[Preprint] A Cytology Dataset for Early Oral Squamous Cell Carcinoma Detection (2025)**
-    * *arXiv:2506.09661*
-    * Spearheaded the development of a multi-center dataset and AI benchmarking for early-stage cancer detection in resource-constrained settings.
+## PCB Micro Scanner & Automated Vision Gantry
 
-* **[In-Press] Real-time Anxiety Detection using Deep Learning and IoT (IEEE)**
-    * Developed a novel multi-modal fusion framework combining Computer Vision, NLP, and Pulse data for accurate stress quantification at the edge.
+One of my most systems-heavy computer vision projects.
+
+Built an automated microscopic PCB scanning platform combining:
+
+- **12 MP industrial camera acquisition**
+- **Raspberry Pi Pico 2**
+- Closed-loop servo-controlled X/Y motion
+- Inductive limit sensors
+- Custom MicroPython firmware
+- Asynchronous Python hardware control
+- Computer vision-based image registration
+- Gigapixel-style image stitching
+
+### Vision
+
+Implemented **sub-pixel image registration using FFT-based phase correlation** to estimate translations between overlapping image tiles.
+
+To prevent cumulative drift across large scans, the system uses global tile-position optimization rather than relying solely on sequential pairwise alignment.
+
+Additional processing includes:
+
+- Median Absolute Deviation based outlier rejection
+- Center-weighted overlap blending
+- Memory-efficient image composition
+- Pyramidal BigTIFF generation using `pyvips`
+
+### Motion & Embedded Control
+
+Developed Pico 2 firmware for:
+
+- Servo motion control
+- Trapezoidal acceleration/deceleration
+- Limit-switch monitoring
+- Position tracking
+- Hardware safety constraints
+- PC ↔ MCU serial communication
+
+The system also supports **continuous-motion acquisition**, where the controller emits positional capture events while the gantry is moving and the host application asynchronously triggers the industrial camera.
+
+### Application Stack
+
+`Python` · `OpenCV` · `NumPy` · `pyvips` · `FastAPI` · `asyncio` · `MicroPython` · `React` · `Tauri`
+
+---
+
+## Whole-Slide Histopathology Analysis
+
+Worked on deep-learning pipelines for high-resolution histopathology images involving:
+
+- Nuclei detection
+- Instance segmentation
+- Cell classification
+- Patch-based Whole Slide Image processing
+- Morphological analysis
+- Quantitative model validation
+
+Models and frameworks explored include:
+
+`YOLO` · `UNet++` · `CellViT` · `HoVer-Net` · `segmentation-models-pytorch`
+
+### Open-source work
+
+### [YOLO + UNet++ Nuclei Segmentation](https://github.com/gurumalekar/yolo-nuke-seg)
+
+Two-stage pipeline combining object localisation with segmentation for high-resolution pathology images.
+
+---
+
+## Industrial Computer Vision
+
+Developed and deployed vision systems for manufacturing inspection involving:
+
+- Defect detection
+- Object detection
+- Classification
+- Anomaly detection
+- Image preprocessing
+- Classical computer vision
+- Production threshold tuning
+- OK / NG inspection logic
+
+Worked with real production samples to analyse:
+
+- False positives
+- False negatives
+- Lighting variation
+- Surface variation
+- Previously unseen defect conditions
+
+Integrated vision decisions with industrial machinery using **PLC communication over Modbus TCP/IP**.
+
+---
+
+## Automated Sickle Cell Screening
+
+Developed a microscopy analysis pipeline combining:
+
+1. Cell detection
+2. Cell-level classification
+3. Sample-level decision logic
+
+The system produces:
+
+- Disease
+- Trait
+- OK
+
+outcomes from microscopic blood-smear images.
+
+**Stack:** `YOLO` · `PyTorch` · `OpenCV`
+
+---
+
+## OCR & Industrial Imaging
+
+Worked on OCR pipelines for challenging real-world imagery, including:
+
+- Seven-segment displays
+- Character detection
+- Image normalization
+- ROI extraction
+- Rotation handling
+- Detection post-processing
+- OCR confidence analysis
+
+I am particularly interested in OCR systems where **correct structure and character count** matter as much as raw recognition accuracy.
+
+---
+
+## Cybersecurity ML Pipeline
+
+Built an inference workflow integrating:
+
+- Graph-based ML models
+- AWS SageMaker
+- ClickHouse
+- Scheduled inference
+- Prediction persistence
+- Model evaluation
+
+Worked on machine-learning approaches for **Domain Generation Algorithm (DGA) detection**.
+
+---
+
+# Research
+
+## A Cytology Dataset for Early Oral Squamous Cell Carcinoma Detection
+
+Contributed to work involving a multicenter oral cytology dataset containing expert-annotated PAP and MGG-stained slides.
+
+The project explores AI-assisted cellular analysis for early oral cancer detection.
+
+**Preprint:**  
+[arXiv:2506.09661](https://arxiv.org/abs/2506.09661)
+
+---
+
+# What I Like Working On
+
+I am especially interested in:
+
+- Production Computer Vision
+- Industrial Machine Vision
+- Medical Imaging
+- Vision Transformers
+- Image Registration
+- Edge AI
+- 3D Vision
+- Multi-camera Systems
+- Robotics Perception
+- GPU Inference
+- Computer Vision + Embedded Systems
+
+I prefer projects where I can understand and improve the **entire system**, from photons entering the camera to the final production decision.
+
+---
+
+# Currently Learning
+
+Deepening my understanding of:
+
+- Linear Algebra for ML
+- Probability & Statistics
+- SVD / PCA
+- 3D Geometry
+- Structure from Motion
+- SLAM
+- NeRF
+- Gaussian Splatting
+- Vision-Language Models
+- Efficient model inference
 
 ---
 
 <div align="center">
 
-**[LinkedIn](https://linkedin.com/in/gururajmalekar/)** • **[Email](mailto:gurumalekar@gmail.com)**
+[**LinkedIn**](https://linkedin.com/in/gururajmalekar/) ·
+[**GitHub**](https://github.com/gurumalekar) ·
+[**Email**](mailto:gurumalekar@gmail.com)
 
 </div>
